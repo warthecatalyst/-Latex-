@@ -1,0 +1,166 @@
+\documentclass[supercite]{HustGraduPaper}
+
+\title{XXX课程课程设计报告}
+\author{一个人}
+\school{XXX}
+\classnum{XXX}
+\stunum{XXX}
+\instructor{XXX}
+\date{202X年XX月XX日}
+
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{framed}
+\usepackage{mathtools}
+\usepackage{subcaption}
+\usepackage{xltxtra}
+\usepackage{bm}
+\usepackage{tikz}
+\usepackage{tikzscale}
+\usepackage{pgfplots}
+
+
+\newcommand{\rfig}[1]{\autoref{fig:#1}}
+\newcommand{\ralg}[1]{\autoref{alg:#1}}
+\newcommand{\rthm}[1]{\autoref{thm:#1}}
+\newcommand{\rlem}[1]{\autoref{lem:#1}}
+\newcommand{\reqn}[1]{\autoref{eqn:#1}}
+\newcommand{\rtbl}[1]{\autoref{tbl:#1}}
+
+\algnewcommand\Null{\textsc{null }}
+\algnewcommand\algorithmicinput{\textbf{Input:}}
+\algnewcommand\Input{\item[\algorithmicinput]}
+\algnewcommand\algorithmicoutput{\textbf{Output:}}
+\algnewcommand\Output{\item[\algorithmicoutput]}
+\algnewcommand\algorithmicbreak{\textbf{break}}
+\algnewcommand\Break{\algorithmicbreak}
+\algnewcommand\algorithmiccontinue{\textbf{continue}}
+\algnewcommand\Continue{\algorithmiccontinue}
+\algnewcommand{\LeftCom}[1]{\State $\triangleright$ #1}
+
+\newtheorem{thm}{定理}[section]
+\newtheorem{lem}{引理}[section]
+
+\colorlet{shadecolor}{black!15}
+
+\theoremstyle{definition}
+\newtheorem{alg}{算法}[section]
+
+\def\thmautorefname~#1\null{定理~#1~\null}
+\def\lemautorefname~#1\null{引理~#1~\null}
+\def\algautorefname~#1\null{算法~#1~\null}
+
+\begin{document}
+
+\maketitle
+
+\clearpage
+
+\pagenumbering{Roman}
+
+\tableofcontents[level=2]
+\clearpage
+
+\pagenumbering{arabic}
+
+\section{第一节}
+
+这份模板根据\url{https://github.com/skinaze/HUSTPaperTemp}\cite{ski17}修改，添
+加了一些CS人常用的东西。
+
+我是绪论。我是绪论。我是绪论。我是绪论。我是绪论。我是绪论。我是绪论。我是绪论
+。我是绪论。我是绪论。我是绪论。我是绪论。我是绪论。我是绪论。我是绪论。我是绪
+论。
+
+\subsection{第一小节}
+
+我是第一小节。我是第一小节。我是第一小节。我是第一小节。我是第一小节。我是第一
+小节。我是第一小节。我是第一小节。我是第一小节。我是第一小节。我是第一小节。我
+是第一小节。我是第一小节。我是第一小节。我是第一小节。我是第一小节。我是第一小
+节。我是第一小节。
+
+\subsection{第二小节}
+
+我是第二小节。我是第二小节。我是第二小节。我是第二小节。我是第二小节。我是第二
+小节。我是第二小节。我是第二小节。我是第二小节。我是第二小节。我是第二小节。我
+是第二小节。我是第二小节。我是第二小节。我是第二小节。我是第二小节。我是第二小
+节。我是第二小节。
+
+\section{还可以写很多}
+
+\subsection{一个算法}
+
+这是一个算法。这是一个算法。这是一个算法。这是一个算法。这是一个算法。这是一个
+算法。这是一个算法。这是一个算法。这是一个算法。这是一个算法。这是一个算法。这
+是一个算法。这是一个算法。这是一个算法。这是一个算法。
+
+\begin{shaded*}\begin{alg}{一个复杂算法}
+  \label{alg:apb}
+  \begin{algorithmic}
+    \Input Two numbers $a$ and $b$
+    \Output The sum of $a$ and $b$
+    \Procedure{A-Plus-B}{$a, b$}
+      \If $a = 0$
+        \State \Return $b$
+      \EndIf
+      \State $res \gets 0$
+      \While{$b \neq 0$}
+        \State Increase $res$ by $1$
+        \State $b \gets b - 1$
+      \EndWhile
+      \State \Return $res$
+    \EndProcedure
+  \end{algorithmic}
+\end{alg}\end{shaded*}
+
+\begin{thm} \label{thm:gsb-apprx}
+  \ralg{apb}所示的算法是正确的。
+\end{thm}
+\begin{proof}[证明]
+  显然，此处略去。
+\end{proof}
+
+我是字。我是字。我是字。我是字。我是字。我是字。我是字。我是字。我是字。我是字
+。我是字。我是字。我是字。我是字。我是字。我是字。我是字。我是字。我是字。我是
+字。我是字。我是字。我是字。我是字。我是字。我是字。我是字。我是字。
+
+\subsection{一张表}
+
+这是一张表。这是一张表。这是一张表。这是一张表。这是一张表。这是一张表。这是一
+张表。这是一张表。这是一张表。这是一张表。这是一张表。这是一张表。这是一张表。
+这是一张表。这是一张表。这是一张表。
+
+\begin{generaltab}{这是一张表}{tbl:hmm}
+  \begin{tabular}{c|ccc}
+    \toprule
+    我是字 & 第二列 & 第三列 & 第四列 \\
+    \midrule
+    第一行 & $1$ & $1$ & $4$ \\
+    第二行 & $5$ & $1$ & $4$ \\
+    \bottomrule
+  \end{tabular}
+\end{generaltab}
+
+\rtbl{hmm}是有味道的。
+
+我是字。我是字。我是字。我是字。我是字。我是字。我是字。我是字。我是字。我是字
+。我是字。我是字。我是字。我是字。我是字。我是字。我是字。我是字。我是字。我是
+字。我是字。我是字。我是字。我是字。我是字。我是字。我是字。我是字。
+
+\subsection{一堆表}
+
+这是一堆表。这是一堆表。这是一堆表。这是一堆表。这是一堆表。这是一堆表。这是一
+堆表。这是一堆表。这是一堆表。这是一堆表。这是一堆表。这是一堆表。这是一堆表。
+这是一堆图。这是一堆图。这是一堆图。
+
+
+
+\rfig{bpg-1}很好看，\rfig{bpg-la}和\rfig{bpg-lb}因为缩得太小了不那么好看。
+
+我是字。我是字。我是字。我是字。我是字。我是字。我是字。我是字。我是字。我是字
+。我是字。我是字。我是字。我是字。我是字。我是字。我是字。我是字。我是字。我是
+字。我是字。我是字。我是字。我是字。我是字。我是字。我是字。我是字。
+
+\end{document}
